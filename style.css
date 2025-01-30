@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 1px solid red;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #072142;
+  color: #FFFFFF;
+  position: relative;
+}
+
+h1 {
+  font-size: 4.5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+.margintop {
+  margin-top: 10px;
+}
+
+.margintop20 {
+  margin-top: 20px;
+}
+
+.margintop30 {
+  margin-top: 30px;
+}
+
+.margintop40 {
+  margin-top: 40px;
+}
+
+.margintop50 {
+  margin-top: 50px;
+}
+
+.pad {
+  padding: 10px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+.pad30 {
+  padding: 30px;
+}
+
+.pad40 {
+  padding: 40px;
+}
+
+.pad50 {
+  padding: 50px;
+}
+
+.display-flex {
+  display: flex;
+}
+.display-flex.justify-space-between {
+  justify-content: space-between;
+}
+
+.border.bottom {
+  border-bottom: 1px solid #636363;
+}
+.border.bottom.dashed {
+  border-bottom: 1px dashed #636363;
+  padding-bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.red {
+  color: #FF4D5A;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+a:hover {
+  color: #FF4D5A;
+  cursor: pointer;
+}
+
+main {
+  font-family: montserrat, sans-serif;
+  /* Style for the menu links */
+  /* Initially hide the elements */
+  /* Class to apply when element is visible or should fade in */
+}
+main section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  main section {
+    height: auto;
+    margin: 16px;
+    margin-top: 60px;
+  }
+  main section:nth-of-type(1) {
+    margin-top: 100px;
+  }
+  main section:nth-last-of-type(1) {
+    margin-bottom: 100px;
+  }
+}
+main img {
+  max-width: 100%;
+}
+main #header {
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  background: #072142;
+  padding: 16px 50px;
+  z-index: 1;
+}
+main #header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #header > div > div {
+  display: flex;
+  gap: 20px;
+}
+main #header > div > div a {
+  font-size: 1.5em;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  main #header {
+    padding: 16px;
+  }
+}
+main #menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  background: #2B2B2B;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+  /* Close button styling */
+}
+main #menu-links li {
+  padding: 15px 20px;
+}
+main #menu-links li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+}
+main #menu-links li:hover {
+  background: #52647B;
+}
+main #menu-links.visible {
+  right: 0;
+}
+main #menu-links #close-menu {
+  text-align: right;
+  background: #323E4D;
+}
+main #menu-links #close-menu a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+main #container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+main #container #hero #info {
+  background-color: #52647B;
+  border-radius: 16px;
+  background-image: url(images/typing-animate.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 700px 700px;
+  background-position: right;
+  height: 500px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 50px;
+}
+main #container #hero #info h1 {
+  line-height: 0.8em;
+}
+main #container #hero #info a {
+  padding: 16px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 14px;
+}
+main #container #hero #info a:hover {
+  border-color: #FF4D5A;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  main #container #hero #info {
+    background-size: auto;
+    padding: 24px 16px;
+    background-image: none;
+    height: auto;
+  }
+}
+main #container #about > div {
+  gap: 2em;
+}
+main #container #about > div > div:nth-of-type(3) {
+  max-width: 35%;
+}
+main #container #about > div > div:nth-of-type(3) > p {
+  line-height: 1.5em;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  main #container #about > div > div:nth-of-type(1),
+  main #container #about > div > div:nth-of-type(2) {
+    display: none;
+  }
+  main #container #about > div > div:nth-of-type(3) {
+    max-width: none;
+    margin-top: 0;
+  }
+}
+main #container #works > div > div {
+  gap: 1em;
+}
+main #container #works > div .work-block {
+  background-color: #52647B;
+  border-radius: 16px;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative; /* Ensures it can move */
+  transition: transform 0.3s ease-in-out; /* Smooth hover animation */
+}
+main #container #works > div .work-block:hover {
+  transform: translateY(-10px); /* Move up by 10px */
+  border: 1px solid #FFFFFF;
+}
+main #container #works > div .work-block h3 {
+  font-size: 22px;
+}
+main #container #works > div .work-block a {
+  font-size: 14px;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  main #container #works {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  main #container #works h3 {
+    margin-left: 16px;
+  }
+  main #container #works .scrollable {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  main #container #works .work-block {
+    flex: 0 0 auto;
+    width: 250px; /* Adjust width for mobile view */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  main #container #works .work-block:nth-of-type(1) {
+    margin-left: 16px;
+  }
+  main #container #works .work-block:nth-last-of-type(1) {
+    margin-right: 16px;
+  }
+  main #container #works .work-block:hover {
+    transform: none;
+    border: none;
+  }
+}
+main #container #skills {
+  display: flex;
+  gap: 5em;
+}
+main #container #skills > div {
+  flex-basis: 100%;
+}
+main #container #skills .skillset {
+  margin-bottom: 30px;
+}
+main #container #skills .skillset span {
+  text-transform: uppercase;
+}
+main #container #skills .skillset ul {
+  list-style-position: inside;
+}
+main #container #skills .skillset hr {
+  margin: 10px 0;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  main #container #skills > div:nth-of-type(2) {
+    display: none;
+  }
+}
+main #container #contact > div {
+  background-image: url(images/Contact.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #container #contact .details {
+  text-align: center;
+  max-width: 450px;
+}
+main #container #contact .details .info {
+  border-bottom: 1px dashed #FF4D5A;
+  padding-bottom: 10px;
+}
+main .slider-modal {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) translateZ(0);
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9001;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), 0px 0px 0px 3000px rgba(0, 0, 0, 0.25);
+}
+main .slider-modal.modal-active {
+  display: block;
+  animation-name: modal-enter;
+  animation-duration: 0.3s;
+  animation-iterations: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+main .slider-modal.modal-close {
+  animation-name: modal-leave;
+  animation-duration: 0.2s;
+  animation-iterations: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+main .slider-modal .title {
+  font-size: 1.5em;
+  padding: 20px;
+  font-weight: normal;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-align: center;
+}
+main .slider-modal .slides {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 800px;
+  margin: 0 auto;
+}
+main .slider-modal .slides iframe {
+  border: none;
+}
+main .slider-modal .slide {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  display: inline-block;
+  z-index: 1;
+}
+main .slider-modal .slide.active {
+  z-index: 3;
+}
+main .slider-modal .slider-image-caption {
+  text-align: center;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 8px 0;
+}
+main .slider-modal .close-icon {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+main .slider-modal .close-icon:before {
+  transform: rotate(45deg);
+}
+main .slider-modal .close-icon:after {
+  transform: rotate(-45deg);
+}
+main .slider-modal .close-icon:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+main .slider-modal .nav-arrow {
+  opacity: 0.3;
+  position: absolute;
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: 10;
+  top: 50%;
+  margin-top: -15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+main .slider-modal .nav-arrow:hover {
+  opacity: 0.8;
+}
+main .slider-modal .nav-arrow:before {
+  transform: rotate(50deg) translateY(-50%);
+}
+main .slider-modal .nav-arrow:after {
+  transform: rotate(-50deg) translateY(50%);
+}
+main .slider-modal .nav-arrow.right {
+  right: 20px;
+}
+main .slider-modal .nav-arrow.left {
+  left: 20px;
+}
+main .slider-modal .nav-arrow i {
+  color: #2B2B2B;
+  left: 7px;
+  top: 5px;
+  position: relative;
+}
+@keyframes modal-enter {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes modal-leave {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+main .fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+main .fade-in-visible {
+  opacity: 1;
+}
+main footer {
+  padding: 16px;
+  background: #2B2B2B;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  main footer {
+    width: -webkit-fill-available;
+  }
+}/*# sourceMappingURL=style.css.map */
