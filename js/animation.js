@@ -30,15 +30,21 @@ $(document).ready(function () {
     });
 });
 
-//FADE IN
+// FADE IN for larger screens only
 $(window).on('scroll', function() {
-    $('.fade-in').each(function() {
-        var elementTop = $(this).offset().top;
-        var windowHeight = $(window).scrollTop() + $(window).height();
+    // Check if the screen width is greater than 1200px (for bigger screens)
+    if ($(window).width() > 1200) {
+        $('.fade-in').each(function() {
+            var elementTop = $(this).offset().top;
+            var windowHeight = $(window).scrollTop() + $(window).height();
 
-        // Check if the element is in the viewport
-        if (windowHeight > elementTop + 200) { // Adjust the 100 if needed
-            $(this).addClass('fade-in-visible');
-        }
-    });
+            // Check if the element is in the viewport
+            if (windowHeight > elementTop + 200) { // Adjust the 200 if needed
+                $(this).addClass('fade-in-visible');
+            }
+        });
+    } else {
+        // Reset opacity to 0 for smaller screens
+        $('.fade-in').removeClass('fade-in-visible').css('opacity', '1');
+    }
 });
